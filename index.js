@@ -21,27 +21,7 @@ var api = new ParseServer({
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   }
   
-verifyUserEmails: false,  //depends on your needs, you can set it to false 
-emailVerifyTokenValidityDuration: 2 * 60 * 60, // in seconds (2 hours = 7200 seconds)
-preventLoginWithUnverifiedEmail: false, // defaults to false
 
-publicServerURL: 'https://safe-drive-app.herokuapp.com/parse',
- // Your apps name. This will appear in the subject and body of the emails that are sent.
-appName: 'Safe Drive',
-
-// The email adapter
-emailAdapter: {
-module: 'parse-server-simple-mailgun-adapter',
-options: {
-  // The address that your emails come from
-  //fromAddress: 'parse@example.com',
-  fromAddress: 'postmaster@sandbox2ddd6d5bbab34db0ad5bbbc97b3745fd.mailgun.org',
-  // Your domain from mailgun.com
-  domain: 'sandbox2ddd6d5bbab34db0ad5bbbc97b3745fd.mailgun.org',
-  // Your API key from mailgun.com
-  apiKey: 'key-c3c3b9c6884d4080a3f1d44b06902961',
-    }
- }
   
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
